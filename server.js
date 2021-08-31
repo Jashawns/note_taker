@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const api = require("./api/api");
 const morgan = require("morgan");
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 // For static HTML and CSS files
 app.use(express.static("public"));
@@ -22,6 +24,6 @@ app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/notes.html"));
 });
 
-app.listen("5000", () => {
-  console.log(`Server started on port 5000`);
+app.listen(port, host, function() {
+  console.log("Server started.......");
 });
