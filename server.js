@@ -22,6 +22,6 @@ app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname + "/public/notes.html"));
 });
 
-app.listen("3001", () => {
-  console.log(`Server started on port 3001`);
+app.listen("5000", () => {
+  console.log(`Server started on port 5000`);
 });
