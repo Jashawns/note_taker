@@ -24,3 +24,22 @@ notes.data = jsonNotes(NotesFile);
 // random ID
 const id = () => uuidv4();
 
+api.get("/", (req, res) => {
+  res.json(notes.getAll());
+});
+
+api.post("/", (req, res) => {
+  const { text, title } = req.body;
+  const newSingleNote = new Note(id(), title, text);
+  notes.save(newSingleNote.getNote());
+  saveNotestoDb(notes.data);
+  res.redirect("/notes");
+});
+
+api.delete("/:id", (req, res) => {
+  const ID = req.params.id;
+  notes.delete(ID);
+  saveNotestoDb(notes.data);
+  res.redirect("/notes");
+});
+module.exports = api;
