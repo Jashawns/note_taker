@@ -15,3 +15,12 @@ const jsonNotes = (file) => {
 const jsonNotesSave = (file, data) => {
   fs.writeFileSync(file, JSON.stringify(data));
 };
+const saveNotestoDb = (data) => jsonNotesSave(NotesFile, data);
+
+// new note
+const notes = new Notes();
+notes.data = jsonNotes(NotesFile);
+
+// random ID
+const id = () => uuidv4();
+
