@@ -16,11 +16,11 @@ The Note Taker app can be used to write and save notes. This application will us
 
 ## Visuals 
 
-![demo](./dist/Assets/images/myteamdemo.png) 
+![demo](./Assets/homepage.png) 
 
-Screencastify Walkthrough:
+![demo](./Assets/typing.png) 
 
-[Screencastify Walkthrough](https://drive.google.com/file/d/1qnT5kx6FSg01KWU9ORj4Q8C4jrRmsyXu/view)
+![demo](./Assets/saved.png) 
 
 ## Installation 
 
@@ -52,5 +52,5 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 https://github.com/Jashawns/note_taker
 
-https://jashawns.github.io/note_taker/
+https://mysterious-anchorage-66950.herokuapp.com/
 
